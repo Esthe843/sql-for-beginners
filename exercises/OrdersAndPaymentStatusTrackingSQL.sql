@@ -1,0 +1,2 @@
+-- Write a SQL query below --
+SELECT o.id AS order_id, c.email, ROUND(total_amount,2) AS total_amount, p.payment_method FROM orders o JOIN customers c ON o.customer_id = c.id JOIN payments p ON o.id = p.order_id WHERE o.ordered_at BETWEEN '2023-10-01 00:00:00' AND '2023-10-31 23:59:59' ORDER BY order_id ASC;
